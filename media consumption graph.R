@@ -8,7 +8,7 @@ library(extrafont)
 library(scales)
 
 # Import and Clean Data (NB data has been taken from: https://www.ofcom.org.uk/research-and-data/tv-radio-and-on-demand/news-media/coronavirus-news-consumption-attitudes-behaviour/interactive-data and manually entered using excel))
-data <- read.csv("C:/Users/sarah/OneDrive/Documents/R/Projects/Personal Projects/uknoncompliance/Media Consumption.csv", header = TRUE)
+data <- read.csv("~/uknoncompliance/Media Consumption.csv", header = TRUE)
 data <- data %>%
   mutate(individual = ï..individual, `16-34` = X16.34, `35-54` = X35.54, `55+` = X55.) %>%
   select(individual, group, `16-34`, `35-54`, `55+`, id)
