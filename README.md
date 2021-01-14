@@ -1,0 +1,1 @@
+![plot](https://github.com/sarahcgall/uknoncompliance/blob/master/mediaconsumptionplot.jpeg)
