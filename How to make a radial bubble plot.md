@@ -11,11 +11,8 @@
 # Libraries
 library(tidyverse)
 library(ggtext)
-library(ggpmisc)
-library(ggrepel)
 library(RColorBrewer)
 library(extrafont)
-library(scales)
 ```
 
 *Cleaning data:*
@@ -102,22 +99,20 @@ ggplot(data) +
   geom_text(data=data,
             aes(x = id, y = position, label = label1), colour = "white", size = 3, fontface = "bold") +
   #manually adding the labels that had values < 4%
+     # "Not following the coronavirus outbreak"
   geom_text(data=data,
-            aes(x = 6.7, y = 2.1, label = "3%"), colour = "#344D90", size = 3, fontface = "plain") +
+            aes(x = 6.7, y = 2.1, label = "2%"), colour = "#344D90", size = 3, fontface = "plain") +
   geom_text(data=data,
             aes(x = 6.74, y = 3.05, label = "2%"), colour = "#E7552C", size = 3, fontface = "plain") +
   geom_text(data=data,
             aes(x = 6.82, y = 4, label = "1%"), colour = "#FFB745", size = 3, fontface = "plain") +
+     # "Unknown source"
   geom_text(data=data,
             aes(x = 5.7, y = 2.2, label = "2%"), colour = "#344D90", size = 3, fontface = "plain") +
   geom_text(data=data,
-            aes(x = 6, y = 3, label = "0%"), colour = "#E7552C", size = 3, fontface = "plain") +
+            aes(x = 5.75, y = 3.06, label = "2%"), colour = "#E7552C", size = 3, fontface = "plain") +
   geom_text(data=data,
             aes(x = 6, y = 4, label = "0%"), colour = "#FFB745", size = 3, fontface = "plain") +
-  geom_text(data=data,
-            aes(x = 3, y = 4.3, label = "3%"), colour = "#FFB745", size = 3, fontface = "plain") +
-  geom_text(data=data,
-            aes(x = 4, y = 4.3, label = "3%"), colour = "#FFB745", size = 3, fontface = "plain") +
   
   # Adjust Legend
   guides(size = FALSE,
@@ -126,7 +121,7 @@ ggplot(data) +
   # Add heading, subtitle, and captions
   labs(title = "<span><br><br>Percent of sources used by respondents to obtain information or news about the Coronavirus<br>outbreak in the week prior by age group</span>",
        subtitle = "<span>Additionally, includes percent of respondents who said they were trying to avoid news about COVID-19 and percent who said<br>they were confused about what they should be doing in response to COVID-19 highlighted in grey.<br></span>",
-       caption = "<span><b>Source:</b> Ofcom <i>(fieldwork by Yonder: 4-6 Dec 2020)</i> | <b>Created by:</b> @sarahcgall_<br></span>") +
+       caption = "<span><b>Source:</b> Ofcom <i>(fieldwork by Yonder: 15-17 Jan 2021)</i> | <b>Created by:</b> @sarahcgall_<br></span>") +
   
   # Adjust theme
   theme_minimal() +
